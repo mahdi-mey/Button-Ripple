@@ -1,15 +1,15 @@
 let rippleButton = document.querySelector('.ripple-button')
 
-rippleButton.addeventListener('click', e => {
+rippleButton.addEventListener('click', e => {
     let positionX = e.offsetX
     let positionY = e.offsetY
 
-    allRippleButtons.style.setProperty('--x', positionX + 'px')
-    allRippleButtons.style.setProperty('--y', positionY + 'px')
+    rippleButton.style.setProperty('--x', positionX + 'px')
+    rippleButton.style.setProperty('--y', positionY + 'px')
 
-    allRippleButtons.classList.add('pulse')
+    rippleButton.classList.add('pulse')
 
-    allRippleButtons.addEventListener('animationend', () => {
-        allRippleButtons.classList.remove('pulse')
-    })
+    rippleButton.addEventListener('animationend', () => {
+        rippleButton.classList.remove('pulse')
+    })  
 })
